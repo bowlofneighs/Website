@@ -1,0 +1,25 @@
+.glitching{ 
+  --glitch-trans-x: 0px;
+  --glitch-trans-y: 0px;
+  --glitch-skew-x: 0deg;
+  --glitch-skew-y: 0deg;
+
+    transform: 
+        translate(var(--glitch-trans-x), var(--glitch-trans-y)) 
+        skew(var(--glitch-skew-x), var(--glitch-skew-y));
+    color: var(--glitch-color) !important;
+    font-family: var(--glitch-font-family) !important;
+
+}
+
+.glitching p{
+    opacity: 0;
+}
+
+#greeting h1, #greeting h4 {
+    font-family: 'Playwrite DE SAS'
+}
+
+.glitching h1, .glitching h4 {
+    font-family: var(--glitch-font-family) !important;
+}
