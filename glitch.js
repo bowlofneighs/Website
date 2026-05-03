@@ -19,6 +19,11 @@ window.addEventListener('scroll', () => {
     greeting.style.color = '';
     greeting.style.fontFamily = '';
   }
+  if(window.scrollY > 600){
+    window.addEventListener('wheel', preventScroll, { passive: false});
+    window.addEventListener('touchmove', preventScroll, {passive: false});
+    window.addEventListener('keydown', preventKeyScroll);
+  }
 });
 
 setInterval(() => {
@@ -32,3 +37,14 @@ setInterval(() => {
         greeting.style.setProperty('--glitch-font-family', (Math.random() < 0.2 ? 'monospace' : 'Playwrite DE SAS'));
     }
 }, 100);
+
+
+function preventScroll(event) {
+  event.preventDefault();
+}
+
+function preventKeyScroll(event){
+  if (['ArrowUp', 'ArrowDown', ' ', 'PageUp', 'PageDown', 'Home', 'End'].includes(event.key)) {
+    event.preventDefault();
+  }
+}

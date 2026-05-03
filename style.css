@@ -32,3 +32,11 @@
 html, body {
     overflow-x: clip; /*to prevent the horizontal scroll bar showing when the text starts glitching*/
 }
+
+/* hides the scroll bar so that the glitch effect cannot be broken*/
+html {
+  scrollbar-width: none; /* Firefox */
+}
+html::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
