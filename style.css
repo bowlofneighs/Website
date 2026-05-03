@@ -25,5 +25,6 @@
 }
 
 .visible {
-    opacity: 1 !important
+    opacity: 1 !important;
+    pointer-events: var(--arrow-pointer-events);
 }
