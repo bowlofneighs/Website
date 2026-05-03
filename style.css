@@ -28,3 +28,7 @@
     opacity: 1 !important;
     pointer-events: var(--arrow-pointer-events);
 }
+
+html, body {
+    overflow-x: clip; /*to prevent the horizontal scroll bar showing when the text starts glitching*/
+}
