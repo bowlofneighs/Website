@@ -5,6 +5,11 @@ const colors = ['#ffffff', '#ffff00', '#ff00ff', '#00ffff', '#0000ff', '#ff0000'
 
 let isGlitching = false;
 
+let L2GlitchStarted = false;
+let L2Glitching = false;
+
+let currentFrame = 0;
+
 
 window.addEventListener('scroll', () => {
   if(window.scrollY > 500){
@@ -19,10 +24,15 @@ window.addEventListener('scroll', () => {
     greeting.style.color = '';
     greeting.style.fontFamily = '';
   }
-  if(window.scrollY > 600){
+  if(window.scrollY > 600 && !L2GlitchStarted){ //glitch takes over
     window.addEventListener('wheel', preventScroll, { passive: false});
     window.addEventListener('touchmove', preventScroll, {passive: false});
     window.addEventListener('keydown', preventKeyScroll);
+    setTimeout(() =>{
+      isGlitching = false;
+      L2Glitching = true;
+      level2Glitch()
+    }, 1000);
   }
 });
 
@@ -47,4 +57,19 @@ function preventKeyScroll(event){
   if (['ArrowUp', 'ArrowDown', ' ', 'PageUp', 'PageDown', 'Home', 'End'].includes(event.key)) {
     event.preventDefault();
   }
+}
+
+function level2Glitch () {
+  if (!L2Glitching) return;
+  if(currentFrame % 2 == 0){
+    greeting.style.setProperty('--glitch-trans-x', '8px');
+    greeting.style.setProperty('--glitch-trans-y', '3px');
+    greeting.style.setProperty('--glitch-color', '#ff00ff');
+  } else {
+    greeting.style.setProperty('--glitch-trans-x', '4px');
+    greeting.style.setProperty('--glitch-trans-y', '9px');
+    greeting.style.setProperty('--glitch-color', '#ff0000'); 
+  }
+  currentFrame++;
+  requestAnimationFrame(level2Glitch);
 }
