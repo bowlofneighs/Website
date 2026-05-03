@@ -15,6 +15,12 @@ let scrollLocked = false;
 
 
 window.addEventListener('scroll', () => {
+    if (L2GlitchStarted) {
+    if (scrollLocked) {
+      window.scrollTo(0, previousScrollY);
+    }
+    return;
+  }
   if(window.scrollY > 500){
     greeting.classList.add('glitching');
     isGlitching = true;
