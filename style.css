@@ -1,9 +1,11 @@
-.glitching{ 
+#greeting {
   --glitch-trans-x: 0px;
   --glitch-trans-y: 0px;
   --glitch-skew-x: 0deg;
   --glitch-skew-y: 0deg;
+}
 
+.glitching{ 
     transform: 
         translate(var(--glitch-trans-x), var(--glitch-trans-y)) 
         skew(var(--glitch-skew-x), var(--glitch-skew-y));
