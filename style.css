@@ -8,7 +8,7 @@
         translate(var(--glitch-trans-x), var(--glitch-trans-y)) 
         skew(var(--glitch-skew-x), var(--glitch-skew-y));
     color: var(--glitch-color) !important;
-    font-family: var(--glitch-font-family) !important;
+    font-family: var(--glitch-font-family);
 
 }
 
