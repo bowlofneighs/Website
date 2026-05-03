@@ -8,7 +8,7 @@
         translate(var(--glitch-trans-x), var(--glitch-trans-y)) 
         skew(var(--glitch-skew-x), var(--glitch-skew-y));
     color: var(--glitch-color) !important;
-    font-family: var(--glitch-font-family);
+    font-family: var(--glitch-font-family) !important;
 
 }
 
@@ -22,4 +22,8 @@
 
 .glitching h1, .glitching h4 {
     font-family: var(--glitch-font-family) !important;
+}
+
+.visible {
+    opacity: 1 !important
 }
