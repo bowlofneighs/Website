@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script> <!--imports tailwindcss-->
     <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- the next couple lines are for google fonts, it has Inter, Josefin Sans, and Playwrite DE SAS-->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Playwrite+DE+SAS:wght@100..400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Playwrite+DE+SAS:wght@100..400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css"> <!-- imports the style.css file we have-->
 </head>
 <body>
@@ -26,6 +26,9 @@
                 And I <span class="font-black">love</span> linux
             </p>
         </div>
+        <div id="scroll-arrow" class="fixed bottom-8 left-1/2 -translate-x-1/2 opacity-0 cursor-pointer transition-opacity duration-1000 text-[#ffffff] text-7xl font-[Comfortaa]">
+            ↓ <!-- impossible to see but theres a downward pointing arrow unicode symbol there-->
+        </div>
     </div>
     <div class="min-h-screen bg-white z-10">
         <p>
@@ -34,5 +37,6 @@
     </div>
 
     <script src="glitch.js"></script>
+    <script src="scroll_arrow.js"></script>
 </body>
 </html>
