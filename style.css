@@ -42,3 +42,8 @@ html {
 html::-webkit-scrollbar {
   display: none; /* Chrome/Safari */
 }
+
+@font-face {
+    font-family: 'Terminus';
+    src: url('TerminusTTF-4.49.3.ttf') format('truetype');
+}
