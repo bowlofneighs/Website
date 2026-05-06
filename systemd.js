@@ -43,6 +43,18 @@ function bootSequence(){
     setTimeout(() => systemd.innerHTML += '<br>[ <span style="color: #00ff00">&nbsp;OK&nbsp;</span> ] This friggin boot-up animation has taken me an hour and a half', 6800);
     setTimeout(() => systemd.innerHTML += '<br>[ <span style="color: #00ff00">&nbsp;OK&nbsp;</span> ] They\'re really locked in on omoggle', 6800);
     setTimeout(() => systemd.innerHTML += '<br>[ <span style="color: #00ff00">&nbsp;OK&nbsp;</span> ] alrighty, we\'re booting now', 7600);
-
-
+    setTimeout(() => systemd.innerHTML = 'Y<span class="caret">█</span>', 7700); 
+    setTimeout(() => systemd.innerHTML = 'Yo<span class="caret">█</span>', 7800);
+    setTimeout(() => systemd.innerHTML = 'Yo, <span class="caret">█</span>', 7900);
+    setTimeout(() => systemd.innerHTML = 'Yo,<br>y<span class="caret">█</span>', 8500);
+    setTimeout(() => systemd.innerHTML = 'Yo,<br>you<span class="caret">█</span>', 8600);
+    setTimeout(() => systemd.innerHTML = 'Yo,<br>you wan<span class="caret">█</span>', 8800);
+    setTimeout(() => systemd.innerHTML = 'Yo,<br>you wanna<span class="caret">█</span>', 8900);
+    setTimeout(() => systemd.innerHTML = 'Yo,<br>you wanna se<span class="caret">█</span>', 9000);
+    setTimeout(() => systemd.innerHTML = 'Yo,<br>you wanna see<span class="caret">█</span>', 9100);
+    setTimeout(() => systemd.innerHTML = 'Yo,<br>you wanna see som<span class="caret">█</span>', 9250);
+    setTimeout(() => systemd.innerHTML = 'Yo,<br>you wanna see someth<span class="caret">█</span>', 9400);
+    setTimeout(() => systemd.innerHTML = 'Yo,<br>you wanna see something<span class="caret">█</span>', 9500);
+    setTimeout(() => systemd.innerHTML = 'Yo,<br>you wanna see something co<span class="caret">█</span>', 9600);
+    setTimeout(() => systemd.innerHTML = 'Yo,<br>you wanna see something cool?<span class="caret">█</span>', 9750);
 }

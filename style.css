@@ -47,3 +47,12 @@ html::-webkit-scrollbar {
     font-family: 'Terminus';
     src: url('TerminusTTF-4.49.3.ttf') format('truetype');
 }
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.caret {
+    animation: blink 1s steps(1) infinite;
+}
