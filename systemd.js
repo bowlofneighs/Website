@@ -1,7 +1,7 @@
 const systemd = document.querySelector('#systemd-bootup-paragraph');
 console.log(systemd);
 systemd.innerHTML += 'Welcome to <span style="color: #b4befe"> My Website</span>'
-
+const hooligang = new Audio('hooligang.mp3');
 addEventListener('boot-up', bootSequence);
 
 function bootSequence(){
@@ -43,18 +43,33 @@ function bootSequence(){
     setTimeout(() => systemd.innerHTML += '<br>[ <span style="color: #00ff00">&nbsp;OK&nbsp;</span> ] This friggin boot-up animation has taken me an hour and a half', 6800);
     setTimeout(() => systemd.innerHTML += '<br>[ <span style="color: #00ff00">&nbsp;OK&nbsp;</span> ] They\'re really locked in on omoggle', 6800);
     setTimeout(() => systemd.innerHTML += '<br>[ <span style="color: #00ff00">&nbsp;OK&nbsp;</span> ] alrighty, we\'re booting now', 7600);
-    setTimeout(() => systemd.innerHTML = 'Y<span class="caret">█</span>', 7700); 
-    setTimeout(() => systemd.innerHTML = 'Yo<span class="caret">█</span>', 7800);
-    setTimeout(() => systemd.innerHTML = 'Yo, <span class="caret">█</span>', 7900);
-    setTimeout(() => systemd.innerHTML = 'Yo,<br>y<span class="caret">█</span>', 8500);
-    setTimeout(() => systemd.innerHTML = 'Yo,<br>you<span class="caret">█</span>', 8600);
-    setTimeout(() => systemd.innerHTML = 'Yo,<br>you wan<span class="caret">█</span>', 8800);
-    setTimeout(() => systemd.innerHTML = 'Yo,<br>you wanna<span class="caret">█</span>', 8900);
-    setTimeout(() => systemd.innerHTML = 'Yo,<br>you wanna se<span class="caret">█</span>', 9000);
-    setTimeout(() => systemd.innerHTML = 'Yo,<br>you wanna see<span class="caret">█</span>', 9100);
-    setTimeout(() => systemd.innerHTML = 'Yo,<br>you wanna see som<span class="caret">█</span>', 9250);
-    setTimeout(() => systemd.innerHTML = 'Yo,<br>you wanna see someth<span class="caret">█</span>', 9400);
-    setTimeout(() => systemd.innerHTML = 'Yo,<br>you wanna see something<span class="caret">█</span>', 9500);
-    setTimeout(() => systemd.innerHTML = 'Yo,<br>you wanna see something co<span class="caret">█</span>', 9600);
-    setTimeout(() => systemd.innerHTML = 'Yo,<br>you wanna see something cool?<span class="caret">█</span>', 9750);
+    setTimeout(greeting_func, 7600);
+    
+}
+
+function greeting_func(){
+    hooligang.play()
+    setTimeout(() => systemd.innerHTML = 'Y<span class="caret">█</span>', 300); 
+    setTimeout(() => systemd.innerHTML = 'Yo<span class="caret">█</span>', 375);
+    setTimeout(() => systemd.innerHTML = 'Yo, <span class="caret">█</span>', 450);
+    setTimeout(() => systemd.innerHTML = 'Yo,<br>y<span class="caret">█</span>', 500);
+    setTimeout(() => systemd.innerHTML = 'Yo,<br>you<span class="caret">█</span>', 575);
+    setTimeout(() => systemd.innerHTML = 'Yo,<br>you wan<span class="caret">█</span>', 625);
+    setTimeout(() => systemd.innerHTML = 'Yo,<br>you wanna<span class="caret">█</span>', 675);
+    setTimeout(() => systemd.innerHTML = 'Yo,<br>you wanna se<span class="caret">█</span>', 725);
+    setTimeout(() => systemd.innerHTML = 'Yo,<br>you wanna see<span class="caret">█</span>', 825);
+    setTimeout(() => systemd.innerHTML = 'Yo,<br>you wanna see som<span class="caret">█</span>', 950);
+    setTimeout(() => systemd.innerHTML = 'Yo,<br>you wanna see someth<span class="caret">█</span>', 1050);
+    setTimeout(() => systemd.innerHTML = 'Yo,<br>you wanna see something<span class="caret">█</span>', 1150);
+    setTimeout(() => systemd.innerHTML = 'Yo,<br>you wanna see something co<span class="caret">█</span>', 1200);
+    setTimeout(() => systemd.innerHTML = 'Yo,<br>you wanna see something cool?<span class="caret">█</span>', 1250);
+    setTimeout(() => systemd.innerHTML = 'No. <span class="caret">█</span>', 2125);
+    setTimeout(() => systemd.innerHTML = 'We<span class="caret">█</span>', 3000);
+    setTimeout(() => systemd.innerHTML = 'Well<span class="caret">█</span>', 3125);
+    setTimeout(() => systemd.innerHTML = 'Well, I<span class="caret">█</span>', 3200);
+    setTimeout(() => systemd.innerHTML = 'Well, Ima<span class="caret">█</span>', 3250);
+    setTimeout(() => systemd.innerHTML = 'Well, I\'ma do<span class="caret">█</span>', 3350);
+    setTimeout(() => systemd.innerHTML = 'Well, I\'ma do it<span class="caret">█</span>', 3550);
+    setTimeout(() => systemd.innerHTML = 'Well, I\'ma do it any<span class="caret">█</span>', 3625);
+    setTimeout(() => systemd.innerHTML = 'Well, I\'ma do it anyway<span class="caret">█</span>', 3750);
 }
