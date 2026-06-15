@@ -73,13 +73,15 @@ function greeting_func(){
     setTimeout(() => systemd.innerHTML = 'Well, I\'ma do it<span class="caret">█</span>', 3550);
     setTimeout(() => systemd.innerHTML = 'Well, I\'ma do it any<span class="caret">█</span>', 3625);
     setTimeout(() => systemd.innerHTML = 'Well, I\'ma do it anyway<span class="caret">█</span>', 3750);
-    setTimeout(() => change_html());
+    setTimeout(() => change_html(), 4000);
 }
 
 function change_html(){
     fetch("portfolio.html")
-        .then(respone => response.text)
-        .then(html =>{
-            document.body.innerHTML = html;
-        })
+        .then(response => response.text())
+        .then(newhtml =>{
+            document.body.innerHTML = newhtml;
+            console.log(newhtml)
+
+        });
 }
