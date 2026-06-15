@@ -3,6 +3,7 @@ console.log(systemd);
 systemd.innerHTML += 'Welcome to <span style="color: #b4befe"> My Website</span>'
 const hooligang = new Audio('hooligang.mp3');
 addEventListener('boot-up', bootSequence);
+document.body.style.cursor = 'none';
 
 function bootSequence(){
     setTimeout(() => systemd.innerHTML += '<br>[ <span style="color: #00ff00">&nbsp;OK&nbsp;</span> ] Listening on Slack.', 0); //&nbsp; is two spaces
@@ -72,4 +73,13 @@ function greeting_func(){
     setTimeout(() => systemd.innerHTML = 'Well, I\'ma do it<span class="caret">█</span>', 3550);
     setTimeout(() => systemd.innerHTML = 'Well, I\'ma do it any<span class="caret">█</span>', 3625);
     setTimeout(() => systemd.innerHTML = 'Well, I\'ma do it anyway<span class="caret">█</span>', 3750);
+    setTimeout(() => change_html());
+}
+
+function change_html(){
+    fetch("portfolio.html")
+        .then(respone => response.text)
+        .then(html =>{
+            document.body.innerHTML = html;
+        })
 }
