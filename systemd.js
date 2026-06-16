@@ -74,6 +74,7 @@ function greeting_func(){
     setTimeout(() => systemd.innerHTML = 'Well, I\'ma do it any<span class="caret">█</span>', 3625);
     setTimeout(() => systemd.innerHTML = 'Well, I\'ma do it anyway<span class="caret">█</span>', 3750);
     setTimeout(() => change_html(), 4000);
+    setTimeout(() => document.body.style.cursor = 'default', 4000);
 }
 
 function change_html(){
