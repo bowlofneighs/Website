@@ -1,0 +1,11 @@
+.tert-div:hover {
+  outline: 2px dashed white;
+  transform:
+    translate(0,0)
+}
+
+.tert-div{
+  outline: 2px dashed white;
+  transform:
+    translate(var(--shake-trans-x), var(--shake-trans-y))
+}
