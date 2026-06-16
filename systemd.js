@@ -2,6 +2,7 @@ const systemd = document.querySelector('#systemd-bootup-paragraph');
 console.log(systemd);
 systemd.innerHTML += 'Welcome to <span style="color: #b4befe"> My Website</span>'
 const hooligang = new Audio('hooligang.mp3');
+hooligang.loop = true
 addEventListener('boot-up', bootSequence);
 document.body.style.cursor = 'none';
 
@@ -77,12 +78,28 @@ function greeting_func(){
     setTimeout(() => document.body.style.cursor = 'default', 4000);
 }
 
+
+
+function shake(){
+    console.log('shake.js loaded')
+const tert_div = document.querySelectorAll('.tert-div');
+console.log(tert_div);
+
+setInterval(() =>{
+    tert_div.forEach(el =>{
+        el.style.setProperty('--shake-trans-y', (Math.random()*50) + 'px')
+        el.style.setProperty('--shake-trans-x', (Math.random()*50) + 'px')
+    })
+}, 50);
+}
+
 function change_html(){
     fetch("portfolio.html")
         .then(response => response.text())
         .then(newhtml =>{
             document.body.innerHTML = newhtml;
             console.log(newhtml)
+            shake()
 
         });
 }
