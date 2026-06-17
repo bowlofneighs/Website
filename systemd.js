@@ -101,10 +101,12 @@ const tert_div = document.querySelectorAll('.tert-div');
 console.log(tert_div);
 
 setInterval(() =>{
+    if(!window.music.paused){
     tert_div.forEach(el =>{
         el.style.setProperty('--shake-trans-y', (Math.random()*20 - 10) + 'px')
         el.style.setProperty('--shake-trans-x', (Math.random()*20 - 10) + 'px')
     })
+}
 }, 50);
 }
 
