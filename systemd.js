@@ -126,6 +126,18 @@ pause.addEventListener('click', () => {
     }
 })
 
+window.addEventListener('keydown', (event) =>{
+    if(event.code === 'Space'){
+            if (window.music.paused) {
+        window.music.play()
+        pause_text.innerText = ''
+    } else {
+        window.music.pause()
+        pause_text.innerText = ''
+    }
+    }
+})
+
 rewind.addEventListener('click', () => {
     window.music.currentTime -= 10;
 })
