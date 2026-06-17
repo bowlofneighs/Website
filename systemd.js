@@ -1,8 +1,8 @@
 const systemd = document.querySelector('#systemd-bootup-paragraph');
 console.log(systemd);
 systemd.innerHTML += 'Welcome to <span style="color: #b4befe"> My Website</span>'
-const hooligang = new Audio('hooligang.mp3');
-hooligang.loop = true
+const hooligang = new Audio('hooligang-intro.wav');
+window.music = new Audio('hooligang-music.wav');
 addEventListener('boot-up', bootSequence);
 document.body.style.cursor = 'none';
 
@@ -76,12 +76,27 @@ function greeting_func(){
     setTimeout(() => systemd.innerHTML = 'Well, I\'ma do it anyway<span class="caret">█</span>', 3750);
     setTimeout(() => change_html(), 4000);
     setTimeout(() => document.body.style.cursor = 'default', 4000);
+    setTimeout(() => shake(), 4000);
+    setTimeout(() => window.music.play(), 3250);
+    setTimeout(() => window.music.loop = true, 4000);
+    setTimeout(() => mediaController(), 4200);
 }
 
 
 
+
+function change_html(){
+    fetch("portfolio.html")
+        .then(response => response.text())
+        .then(newhtml =>{
+            document.body.innerHTML = newhtml;
+            console.log(newhtml)
+            shake()
+
+        });
+}
+
 function shake(){
-    console.log('shake.js loaded')
 const tert_div = document.querySelectorAll('.tert-div');
 console.log(tert_div);
 
@@ -93,13 +108,29 @@ setInterval(() =>{
 }, 50);
 }
 
-function change_html(){
-    fetch("portfolio.html")
-        .then(response => response.text())
-        .then(newhtml =>{
-            document.body.innerHTML = newhtml;
-            console.log(newhtml)
-            shake()
+function mediaController(){
 
-        });
+
+const fastforward = document.querySelector('#fastforward');
+const pause = document.querySelector('#pause');
+const rewind = document.querySelector('#rewind');
+const pause_text = document.querySelector('#pause-text');
+
+pause.addEventListener('click', () => {
+    if (window.music.paused) {
+        window.music.play()
+        pause_text.innerText = ''
+    } else {
+        window.music.pause()
+        pause_text.innerText = ''
+    }
+})
+
+rewind.addEventListener('click', () => {
+    window.music.currentTime -= 10;
+})
+
+fastforward.addEventListener('click', () => {
+    window.music.currentTime += 10;
+})
 }

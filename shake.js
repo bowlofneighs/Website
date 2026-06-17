@@ -1,4 +1,3 @@
-console.log('shake.js loaded')
 const tert_div = document.querySelectorAll('.tert-div');
 console.log(tert_div);
 

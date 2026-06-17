@@ -15,9 +15,9 @@
     <script>console.log('portfolio loaded')</script>
     <div class="items-center flex flex-col justify-center min-h-screen text-white bg-[#111111]"><!--whole thing-->
         <div class="flex p-2"> <!--first row-->
-            <div class="p-2">
+            <div> 
             <div class="hover:bg-black transition-colors duration-150 tert-div p-2">
-                <p class="text-9xl" style="font-family: 'Alfa Slab One'">
+                <p class="text-9xl block p-0 m-0 leading-none" style="font-family: 'Alfa Slab One'">
                 <span class="text-xl"> I'm</span>
                 <br>
                     Bowl<span class="text-xl">ofneighs</span>
@@ -107,5 +107,37 @@
             </div>
         </div>
     </div>
+    <div class="border-4 border-white bg-[#222222] fixed z-50 bottom-[50px] right-[50px]">
+        <div class="flex p-2">
+            <a href="https://www.youtube.com/playlist?list=OLAK5uy_kBbKV0HhRFyBipMjJnGVUw5hz_g2Dk6wU" target="_blank"><img src="Punk_Tactics_cover.jpg" class="w-[150px] h-[150px] border-4 border-white"></a>
+            <div>
+            <a href="https://www.youtube.com/watch?v=UPqDWj-RxV8" target="_blank" style="text-decoration: underline wavy; font-family: 'Alfa Slab One'" class="hover:text-[#444444] transition-colors duration-150 text-2xl p-2">
+                HOOLIGANG <br>
+            </a>
+            <a href="https://www.youtube.com/channel/UCby-lf41M60E1YjSFhZlYlQ" target="_blank" style="font-family: 'Alfa Slab One'; text-decoration: underline wavy;" class="hover:text-[#444444] transition-colors duration-150">
+                Joey Valence and Brae
+            </a>
+            </div>
+        </div>
+        <div class="flex gap-4 ph-[50px] p-[10px] justify-center">
+        <button class="border-4 border-white bg-[#222222] hover:bg-[#ffffff] hover:text-[#000000] transition-colors duration-150 p-[10px] w-[70px] h-[70px]" id="rewind">
+            <p class="text-3xl" style="text-decoration: none; font-family: 'JetBrainsMono'">
+            󰴪 
+            </p>
+        </button>
+        <button class="border-4 border-white bg-[#222222] hover:bg-[#ffffff] hover:text-[#000000] transition-colors duration-150 p-[10px] w-[70px] h-[70px]" id="pause">
+            <p id="pause-text" class="text-3xl" style="font-family: 'JetBrainsMono'">
+                
+            </p>
+        </button>
+        <button class="border-4 border-white bg-[#222222] hover:bg-[#ffffff] hover:text-[#000000] transition-colors duration-150 p-[10px] w-[70px] h-[70px]" id="fastforward">
+            <p class="text-3xl" style="font-family: 'JetBrainsMono'">
+                󰵱
+            </p>
+        </button>
+    </div>
+    </div>
+    <script src="shake.js"></script>
+    <script src="media-controller.js"></script>
 </body>
 </html>

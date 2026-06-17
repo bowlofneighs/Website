@@ -9,3 +9,8 @@
   transform:
     translate(var(--shake-trans-x), var(--shake-trans-y))
 }
+
+@font-face {
+  font-family: 'JetBrainsMono';
+  src: url('JetBrainsMonoNLNerdFontMono-Regular.ttf') format('truetype');
+}
